@@ -95,24 +95,23 @@ The model building process was thorough, and the results are outlined in the ear
 
 **Results:**
 
-After a comprehensive analysis of the NYC Taxi and Limousine Commission's dataset and the construction of a multiple linear regression model, the following key results were observed:
+Model Performance: The model's performance on both the training and test sets is high. This suggests that there is no significant bias in the model, and it is not overfitting the data. In fact, the test scores were somewhat better, indicating the model's generalization capability.
 
-- The R-squared (R^2) value for the test dataset is approximately 0.868, indicating that 86.8% of the variance in the `fare_amount` variable is explained by the model.
-- The Mean Absolute Error (MAE) for the test data is around 2.1337, suggesting that, on average, the model's fare predictions closely match actual values.
-- The Mean Squared Error (MSE) for the test dataset is 14.3264, indicating lower prediction errors.
-- The Root Mean Squared Error (RMSE) for the test dataset is 3.7850, representing a reasonable level of prediction error.
+R-squared (R^2): The R-squared value for the test data is approximately 0.868, indicating that 86.8% of the variance in the fare_amount variable is explained by the model. This is a strong indicator of how well the model fits the data.
+
+Mean Absolute Error (MAE): The MAE is 2.1337 for the test data. MAE provides an estimate of the average prediction error, and a value of around 2 suggests that the model's predictions are generally close to the actual fare amounts.
+
+Mean Squared Error (MSE): The MSE for the test data is 14.3264, which represents the average of squared errors. Lower MSE values indicate better model performance.
+
+Root Mean Squared Error (RMSE): The RMSE for the test data is 3.7850, which is the square root of the MSE. It also provides an estimate of the prediction error, and a lower RMSE is better.
+
+Residual Analysis: The distribution of residuals is normal and centered around a mean of -0.015. A normal distribution of residuals around zero is a positive sign as it demonstrates that the model's errors are evenly distributed and unbiased.
+
+In summary, the multiple linear regression model has shown strong performance in predicting taxi fares, with a high R-squared value, low prediction errors, and unbiased residuals. This suggests that the model can be a valuable tool for optimizing fare predictions and improving service quality for the New York City TLC.
 
 **Conclusions:**
 
-Based on the results and analysis, the following conclusions can be drawn:
-
-1. **Model Effectiveness:** The multiple linear regression model built for predicting taxi fares demonstrates strong performance. The high R-squared value and low prediction errors indicate that the model effectively captures the relationships between various factors and fare amounts.
-
-2. **Generalization Capability:** The model performs well on both the training and test datasets, which suggests that it avoids overfitting and generalizes effectively to unseen data.
-
-3. **Actionable Insights:** The model can be used as a valuable tool for optimizing fare predictions and improving service quality for the New York City TLC. It offers actionable information for data-driven decision-making, which can benefit the residents of New York City.
-
-Overall, this project successfully combines exploratory data analysis (EDA) and multiple linear regression to create an accurate predictive model for taxi fare optimization, with the potential to enhance service quality and pricing decisions for the New York City TLC.
+The project successfully combined comprehensive Exploratory Data Analysis (EDA) with the construction of a multiple linear regression model. The objective was to carefully examine the NYC Taxi and Limousine Commission's dataset, uncover insights through EDA, and build a predictive model. The primary aim was to provide actionable information to optimize fare predictions, improve service quality, and make data-driven decisions for the benefit of New Yorkers.
 
 ### Recommendations
 
