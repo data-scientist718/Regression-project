@@ -116,8 +116,8 @@ Overall, this project successfully combines exploratory data analysis (EDA) and 
 
 ### Recommendations
 
-  -The New York City Taxi and Limousine commission can use these findings to create an app that allows users (TLC riders) to see the estimated fare before their ride begins.
-  -The model provides a generally strong and reliable fare prediction that can be used in downstream modeling efforts.
+- The New York City Taxi and Limousine commission can use these findings to create an app that allows users (TLC riders) to see the estimated fare before their ride begins.
+- The model provides a generally strong and reliable fare prediction that can be used in downstream modeling efforts.
 
 ### Limitations
 
