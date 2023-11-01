@@ -20,20 +20,6 @@ The core objective of this project is to combine a comprehensive Exploratory Dat
 
 The multiple linear regression model's performance is noteworthy. It exhibits high accuracy on both the training and test datasets, indicating that the model is unbiased and avoids overfitting. In fact, the model's performance on the test dataset surpasses that of the training dataset, reflecting its strong generalization capabilities.
 
-Key Model Metrics:
-
-- **R-squared (R^2):** The test dataset shows an R^2 value of approximately 0.868, signifying that 86.8% of the variance in the `fare_amount` variable can be accounted for by the model. This underscores the model's excellent fit to the data.
-
-- **Mean Absolute Error (MAE):** The test data's MAE is about 2.1337, indicating that the model's fare predictions are generally close to actual values.
-
-- **Mean Squared Error (MSE):** The test dataset's MSE stands at 14.3264, reflecting favorable model performance with lower MSE values.
-
-- **Root Mean Squared Error (RMSE):** The test dataset's RMSE is 3.7850, indicating a reasonable level of prediction error.
-
-- **Residual Analysis:** Residuals are normally distributed around a mean of -0.015. This suggests that the model's errors are evenly distributed and unbiased.
-
-In summary, this project successfully combines EDA and multiple linear regression to create an effective predictive model for taxi fare optimization. With strong model performance and accurate predictions, the potential for improving fare predictions and service quality is significant, enabling data-informed decision-making for the betterment of New Yorkers.
-
 ### Data Source
 
 The dataset used in this project is secondary data obtained from Google. It includes NYC Taxi and Limousine Commission (New York City TLC).
