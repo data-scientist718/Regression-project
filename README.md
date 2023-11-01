@@ -43,23 +43,16 @@ The dataset used in this project is secondary data obtained from Google. It incl
 - Jupyter Notebook
 - Python
 - python libraries
-  - Imports Packages for numerics + dataframes
-  - import pandas as pd
-  - import numpy as np
-
-  - Packages for visualization
-  - import matplotlib.pyplot as plt
-  - import seaborn as sns
-
-  - Packages for date conversions for calculating trip durations
+  - pandas
+  - numpy
+  - matplotlib.pyplot
+  - seaborn
   - from datetime import datetime
   - from datetime import date
   - from datetime import timedelta
-
-  - Packages for OLS, MLR, confusion matrix
   - from sklearn.preprocessing import StandardScaler
   - from sklearn.model_selection import train_test_split
-  - import sklearn.metrics as metrics # For confusion matrix
+  - sklearn.metrics
   - from sklearn.linear_model import LinearRegression
   - from sklearn.metrics import mean_absolute_error,r2_score,mean_squared_error
 
