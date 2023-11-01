@@ -7,7 +7,7 @@
 ## Table of Content
 
 - [Project Overview](#project-overview)
-- [Results and Findings](#results-and-findings)
+- [Results and Conclusion](#results-and-conclusions)
 - [Recommendation](#recommendations)
 
 ### Project Overview
@@ -63,39 +63,62 @@ In the initial data preparation phase, we performed the following tasks:
 1. Data loading and inspections.
 2. Handling missing values.
 3. Data cleaning and formatting.
+4. Convert type of columns.
 
-### Hypothesis Test
+#### EDA(Exploratory Data Analysis )
 
-In this project, we conduct a two-sample t-test to investigate potential differences in verified status column
+We used a variety of techniques to understand our dataset better including but not limited to:
 
-- **$H_0$**: There is no difference in number of views between TikTok videos posted by verified accounts and TikTok videos posted by unverified accounts (any observed difference in the sample data is due to chance or sampling variability).
+1. Descriptive statistics for each variable.
+2. Visualizations such as histograms, box plots, scatterplots etc.
+3. Correlation matrix heatmap.
+4. Pair plotting.
+5. Univariate analysis using distributions.
+6. outltiers handling
+7. IQR methoed to remove Outliers
+8. Missing value methodology (Imputation)
+9. Feature selection by correlation with target variable.
 
-- **$H_A$**: There is a difference in number of views between TikTok videos posted by verified accounts and TikTok videos posted by unverified accounts (any observed difference in the sample data is due to an actual difference in the corresponding population means).
+### Model Building
 
-### Results and Findings
+In this phase of the project, we focused on constructing a multiple linear regression model to predict taxi fares using the dataset provided by the NYC Taxi and Limousine Commission (New York City TLC). The model building process involved the following key steps:
 
-Based on the analysis of the dataset, the following key findings were observed:
+1. Data Preprocessing
+2. Model Selection
+3. Model Training
+4. Model Evaluation
+5. Interpretation
+6. Residual Analysis
+The model building process was thorough, and the results are outlined in the earlier section, demonstrating the model's effectiveness in predicting taxi fares. It paves the way for data-driven decisions and service quality improvements for the benefit of New Yorkers.
 
-- The p-value for the t-test (pvalue=2.6088823687177823e-120) is extremely small, indicating a high level of statistical significance.
-- With a p-value much smaller than the significance level of 5%, we reject the null hypothesis.
+### Results and Conclusions
 
-These findings lead to the following conclusions:
+**Results:**
 
-- There is a statistically significant difference in the mean video view count between verified and unverified accounts on TikTok.
-- The analysis reveals that videos from verified accounts tend to have a significantly different average view count compared to videos from unverified accounts.
+After a comprehensive analysis of the NYC Taxi and Limousine Commission's dataset and the construction of a multiple linear regression model, the following key results were observed:
 
-This suggests potential fundamental behavioral differences between these two groups of TikTok accounts.
+- The R-squared (R^2) value for the test dataset is approximately 0.868, indicating that 86.8% of the variance in the `fare_amount` variable is explained by the model.
+- The Mean Absolute Error (MAE) for the test data is around 2.1337, suggesting that, on average, the model's fare predictions closely match actual values.
+- The Mean Squared Error (MSE) for the test dataset is 14.3264, indicating lower prediction errors.
+- The Root Mean Squared Error (RMSE) for the test dataset is 3.7850, representing a reasonable level of prediction error.
+
+**Conclusions:**
+
+Based on the results and analysis, the following conclusions can be drawn:
+
+1. **Model Effectiveness:** The multiple linear regression model built for predicting taxi fares demonstrates strong performance. The high R-squared value and low prediction errors indicate that the model effectively captures the relationships between various factors and fare amounts.
+
+2. **Generalization Capability:** The model performs well on both the training and test datasets, which suggests that it avoids overfitting and generalizes effectively to unseen data.
+
+3. **Actionable Insights:** The model can be used as a valuable tool for optimizing fare predictions and improving service quality for the New York City TLC. It offers actionable information for data-driven decision-making, which can benefit the residents of New York City.
+
+Overall, this project successfully combines exploratory data analysis (EDA) and multiple linear regression to create an accurate predictive model for taxi fare optimization, with the potential to enhance service quality and pricing decisions for the New York City TLC.
 
 ### Recommendations
 
-Based on the observed statistically significant difference in average view counts between videos from verified and unverified accounts, it is recommended to explore the underlying factors contributing to this behavioral difference. Consider the following next steps:
-
-- Investigate the root causes of this difference, such as whether unverified accounts tend to post clickbait content or if they are associated with view count manipulation through spam bots.
-- Explore the creation of a regression model focused on the 'verified_status' variable. A regression model can provide insights into user behavior within the group of verified users.
-- The regression model can help analyze and predict behaviors and characteristics associated with verified accounts, leading to a deeper understanding of the factors influencing user interactions and engagement on TikTok.
-
-Continuing the analysis with these recommendations can provide valuable insights and inform strategies for content creators and platform administrators on TikTok.
+  -The New York City Taxi and Limousine commission can use these findings to create an app that allows users (TLC riders) to see the estimated fare before their ride begins.
+  -The model provides a generally strong and reliable fare prediction that can be used in downstream modeling efforts.
 
 ### Limitations
 
-I had to remove all Null values from data because they would have affected the accuracy of my conclusions from the Hypothesis testing.
+The approach to handling outliers using the IQR method may impact the representation of extreme fare amounts.
